@@ -1,0 +1,58 @@
+# Python Bytecode files
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Virtual environment
+venv/
+env/
+*.env
+*.venv
+
+# Django migrations
+*/migrations/*
+!*/migrations/__init__.py
+
+# Database files
+*.sqlite3
+
+# Logs
+*.log
+
+# Media files
+media/
+
+# Static files
+static/
+
+# Cache files
+*.cache
+*.bak
+*.swp
+
+# Python egg files
+*.egg
+*.egg-info
+dist/
+build/
+
+# IDEs
+.vscode/
+.idea/
+*.iml
+
+# Django settings
+settings.py
+# (Keep this line only if you're not using a `settings_local.py` or another separate configuration for sensitive settings)
+
+# .env files containing sensitive information
+.env
+*.env
+
+# Backup files from editors
+*~
+*.swp
+
+# Dependency directories
+node_modules/
