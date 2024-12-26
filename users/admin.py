@@ -13,16 +13,11 @@ class PreRegisteredStaffAdmin(admin.ModelAdmin):
 @admin.register(User)
 class CustomUserAdmin(UserAdmin):
     fieldsets = UserAdmin.fieldsets + (
-        ('Additional Info', {'fields': ('user_type', 'phone_number', 'address', 'work_id' )}),
+        ('Additional Info', {'fields': ( 'phone_number', 'address', 'work_id' )}),
     )
     add_fieldsets = UserAdmin.add_fieldsets + (
-        ('Additional Info', {'fields': ('user_type', 'phone_number', 'address', 'work_id')}),
+        ('Additional Info', {'fields': ('phone_number', 'address', 'work_id')}),
     )
-@admin.register(StaffProfile)
-class StaffProfileAdmin(admin.ModelAdmin):
-    list_display = ('user', 'work_id', 'department', 'position', 'full_name', 'email')
-    search_fields = ('user__username', 'work_id', 'full_name', 'email')
-    list_filter = ('department', 'is_registered')
 
 @admin.register(PendingUser)
 class PendingUserAdmin(admin.ModelAdmin):
