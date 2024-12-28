@@ -1,6 +1,6 @@
 from django.urls import path, include
 from . import views
-from .views import *
+from users.views import *
 from rest_framework_simplejwt.views import TokenObtainPairView, TokenRefreshView
 from rest_framework_nested import routers
 
