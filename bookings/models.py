@@ -17,6 +17,7 @@ class Booking(models.Model):
         choices=BookingStatus.choices,
         default=BookingStatus.PENDING
     )
+    capacity=models.PositiveIntegerField(default=1)
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
     def __str__(self):
